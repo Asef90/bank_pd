@@ -1,0 +1,80 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-minitest
+
+AllCops:
+  TargetRubyVersion: 2.7.1
+  DisplayCopNames: true
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'bin/**/*'
+    - 'bundle/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+  NewCops: enable
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/DocumentationMethod:
+  RequireForNonPublicMethods: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Rails:
+  Enabled: true
+
+# Disable metrics cops
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+# Disable pending cops
+
+Minitest/LiteralAsActualArgument:
+  Enabled: false
+Lint/RedundantSafeNavigation:
+  Enabled: false
+Rails/SquishedSQLHeredocs:
+  Enabled: false
+Layout/EmptyLineBetweenDefs:
+  Enabled: false
+Style/NegatedIfElseCondition:
+  Enabled: false
+Naming/InclusiveLanguage:
+  Enabled: false
