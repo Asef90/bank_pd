@@ -59,4 +59,7 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  ENV['BANK_API_URL'] = 'https://api.test-bank.com/withdraw'
+  ENV['BANK_API_KEY'] = 'TOKEN'
 end
