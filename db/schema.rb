@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2021_11_07_205338) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.decimal "amount"
-    t.bigint "account_id"
+    t.decimal "amount", precision: 15, scale: 2, null: false
+    t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
